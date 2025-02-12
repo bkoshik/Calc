@@ -16,13 +16,14 @@ while shure == "n":
         changeLang = "Change language (kz/rus/eng) or to exit enter exit: "
         num1word = "Enter first number: "
         num2word = "Enter second number: "
-        opword = "Enter operation (+, -, *, /, ^, sqr): "
+        opword = "Enter operation (+, -, *, /, ^, sqr, fact): "
         sumword = "Sum: "
         diffword = "Difference: "
         prodword = "Product: "
         quotword = "Quotient: "
         powword = "Power: "
         sqrtword = "Square root: "
+        factword = "Factorial: "
         shureword = "Are you sure? (y/n): "
         conword = "Continue? (y/n): "
         zeroerror = "Error: Division by zero"
@@ -33,13 +34,14 @@ while shure == "n":
         changeLang = "Изменить язык (kz/rus/eng) или чтобы выйти введите exit: "
         num1word = "Введите первое число: "
         num2word = "Введите второе число: "
-        opword = "Введите операцию (+, -, *, /, ^, sqr): "
+        opword = "Введите операцию (+, -, *, /, ^, sqr, fact): "
         sumword = "Сумма: "
         diffword = "Разность: "
         prodword = "Произведение: "
         quotword = "Частное: "
         powword = "Степень: "
         sqrtword = "Квадратный корень: "
+        factword = "Факториал: "
         shureword = "Вы уверены? (y/n): "
         conword = "Продолжить? (y/n): "
         zeroerror = "Ошибка: Деление на ноль"
@@ -50,13 +52,14 @@ while shure == "n":
         changeLang = "Тілді өзгерту (kz/rus/eng) немесе шығу үшін exit жазыңыз: "
         num1word = "Бірінші санды енгізіңіз: "
         num2word = "Екінші санды енгізіңіз: "
-        opword = "Операцияны енгізіңіз (+, -, *, /, ^, sqr): "
+        opword = "Операцияны енгізіңіз (+, -, *, /, ^, sqr, fact): "
         sumword = "Қосынды: "
         diffword = "Айырмашылық: "
         prodword = "Көбейту: "
         quotword = "Бөліну: "
         powword = "Дәрежесі: "
         sqrtword = "Квадрат түбірі: "
+        factword = "Факториал: "
         shureword = "Сіз сенімдісіз бе? (y/n): "
         conword = "Жалғастыру? (y/n): "
         zeroerror = "Қате: Нольға бөлу"
@@ -75,7 +78,7 @@ while shure == "n":
 while con == "y":
     # Op is first because of if/else
     op = input(opword)
-    if op == "sqr":
+    if op == "sqr" or op == "fact":
         num1 = float(input(num1word))
     else:
         num1 = float(input(num1word))
@@ -98,6 +101,8 @@ while con == "y":
             print(powword + str(pow(num1, num2)))
         case "sqr":
             print(sqrtword + str(sqrt(num1)))
+        case "fact":
+            print(factword + str(factorial(int(num1))))
         case _:
             print(operror)
             continue
