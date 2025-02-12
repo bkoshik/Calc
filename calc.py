@@ -16,7 +16,7 @@ while shure == "n":
         changeLang = "Change language (kz/rus/eng) or to exit enter exit: "
         num1word = "Enter first number: "
         num2word = "Enter second number: "
-        opword = "Enter operation (+, -, *, /, ^, sqr, fact): "
+        opword = "Enter operation (+, -, *, /, ^, sqr, fact, gcd, lcm): "
         sumword = "Sum: "
         diffword = "Difference: "
         prodword = "Product: "
@@ -24,6 +24,8 @@ while shure == "n":
         powword = "Power: "
         sqrtword = "Square root: "
         factword = "Factorial: "
+        gcdword = "GCD: "
+        lcdmword = "LCM: "
         shureword = "Are you sure? (y/n): "
         conword = "Continue? (y/n): "
         zeroerror = "Error: Division by zero"
@@ -34,7 +36,7 @@ while shure == "n":
         changeLang = "Изменить язык (kz/rus/eng) или чтобы выйти введите exit: "
         num1word = "Введите первое число: "
         num2word = "Введите второе число: "
-        opword = "Введите операцию (+, -, *, /, ^, sqr, fact): "
+        opword = "Введите операцию (+, -, *, /, ^, sqr, fact, gcd, lcm): "
         sumword = "Сумма: "
         diffword = "Разность: "
         prodword = "Произведение: "
@@ -42,6 +44,8 @@ while shure == "n":
         powword = "Степень: "
         sqrtword = "Квадратный корень: "
         factword = "Факториал: "
+        gcdword = "НОД: "
+        lcmword = "НОК: "
         shureword = "Вы уверены? (y/n): "
         conword = "Продолжить? (y/n): "
         zeroerror = "Ошибка: Деление на ноль"
@@ -52,7 +56,7 @@ while shure == "n":
         changeLang = "Тілді өзгерту (kz/rus/eng) немесе шығу үшін exit жазыңыз: "
         num1word = "Бірінші санды енгізіңіз: "
         num2word = "Екінші санды енгізіңіз: "
-        opword = "Операцияны енгізіңіз (+, -, *, /, ^, sqr, fact): "
+        opword = "Операцияны енгізіңіз (+, -, *, /, ^, sqr, fact, gcd, lcm): "
         sumword = "Қосынды: "
         diffword = "Айырмашылық: "
         prodword = "Көбейту: "
@@ -60,6 +64,8 @@ while shure == "n":
         powword = "Дәрежесі: "
         sqrtword = "Квадрат түбірі: "
         factword = "Факториал: "
+        gcdword = "ЕҮОБ: "
+        lcmword = "ЕКОЕ: "
         shureword = "Сіз сенімдісіз бе? (y/n): "
         conword = "Жалғастыру? (y/n): "
         zeroerror = "Қате: Нольға бөлу"
@@ -103,6 +109,10 @@ while con == "y":
             print(sqrtword + str(sqrt(num1)))
         case "fact":
             print(factword + str(factorial(int(num1))))
+        case "gcd":
+            print(gcdword + str(gcd(int(num1), int(num2))))
+        case "lcm":
+            print(lcmword + str(lcm(int(num1), int(num2))))
         case _:
             print(operror)
             continue
