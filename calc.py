@@ -109,6 +109,8 @@ while con == "y":
 
     if op == "sqr" or op == "fact":
         num1 = float(input(num1word))
+    elif op == "history":
+        None
     else:
         num1 = float(input(num1word))
         num2 = float(input(num2word))
