@@ -178,7 +178,6 @@ while con == "y":
         else:
             lines = [f"{date_str}:\n{new_entry}"]
 
-        # Записываем обновленные данные обратно в файл
         with open(hfile, "w", encoding="utf-8") as file:
             file.writelines(lines)
     
